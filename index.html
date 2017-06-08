@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django-Angular</title>
+ 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	 <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Abel|Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="BangaClient">
+	
+	<div ng-include="'partials/navbar.html'"></div>
+	<div ng-view></div>
+
+
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.0.min.js"
+	  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+	  crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.15/angular-filter.min.js"></script>
+	 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+	 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+	 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+
+
+
+	<script type="text/javascript" src="app/app.js"></script>
+
+	<script type="text/javascript" src="app/controllers/NavbarCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/AuthCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/ProductCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/ProductTypeCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/ProductDetailCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/SearchCtrl.js"></script>
+
+</body>
+</html>

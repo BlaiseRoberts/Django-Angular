@@ -1,0 +1,19 @@
+
+<div class="container">
+	<h1 class="center">Products</h1>
+
+	<div class="row">
+        <div class="col s4" ng-repeat="product in products" style="height:10rem">
+          <div class="card blue-grey lighten-1" style="height:8rem; overflow:scroll">
+            <div class="card-content white-text">
+              <div class="card-action">
+                <a href="#!/products/{{product.id}}">{{product.title}} </a>
+              </div>
+              <p>{{product.description}}</p>
+              <p class="right-align">--Sold by {{product.customer}}</p>              
+            </div>
+          </div>
+        </div>
+      </div>
+            
+</div>
