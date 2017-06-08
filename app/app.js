@@ -24,6 +24,10 @@ angular.module('BangaClient').config(
         templateUrl: 'partials/search.html',
         controller: "SearchCtrl",
       })
+      .when('/order/:orderID',{
+        templateUrl: 'partials/order.html',
+        controller: "OrderCtrl",
+      })
       .when('/types', {
         controller: 'ProductTypesController',
         templateUrl: 'partials/producttypes.html'

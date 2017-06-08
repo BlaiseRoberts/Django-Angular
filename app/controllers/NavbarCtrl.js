@@ -42,6 +42,25 @@ app.controller("NavbarCtrl", function($scope, $http, $location, RootFactory, api
       );
   };
 
+  $scope.getOrder = function(){
+    $http({
+        url: `${apiUrl}/get_order`,
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        data: {
+          "token": RootFactory.getToken()
+        }
+      }).then(
+        res => {
+          console.log(res)
+          $scope.orderID = res.data.order
+        },
+        console.error
+      );
+  };
+
 
   $scope.login = function() {
       $http({
@@ -55,9 +74,10 @@ app.controller("NavbarCtrl", function($scope, $http, $location, RootFactory, api
         res => {
           $scope.isLoggedIn = true;
           RootFactory.setToken(res.data.token);
-          if (res.data.token !== "") {
-            $location.path('/products');
-          }
+          $scope.getOrder()
+          // if (res.data.token !== "") {
+          //   $location.path('/products');
+          // }
         },
         console.error
       );
